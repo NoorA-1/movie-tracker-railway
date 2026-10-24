@@ -1,0 +1,16 @@
+# Installed dependencies
+node_modules/
+
+# Private environment configuration
+.env
+.env.*
+!.env.example
+
+# Frontend build output
+dist/
+
+# Logs
+*.log
+
+# Test coverage
+coverage/
