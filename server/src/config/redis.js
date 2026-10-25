@@ -8,6 +8,7 @@ export async function createRedisConnection({ forWorker = false } = {}) {
   }
 
   const connection = new Redis(url, {
+    family: 0,
     lazyConnect: true,
     connectTimeout: 10000,
 
