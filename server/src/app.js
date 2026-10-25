@@ -11,6 +11,7 @@ import { fileURLToPath } from "node:url";
 import movieRoutes from "./routes/movieRoutes.js";
 import tmdbRoutes from "./routes/tmdbRoutes.js";
 import posterRoutes from "./routes/posterRoutes.js";
+import storedPosterRoutes from "./routes/storedPosterRoutes.js";
 
 const app = express();
 
@@ -79,6 +80,7 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+app.use(storedPosterRoutes);
 app.use("/api/movies", posterRoutes);
 
 // Movie endpoints.
